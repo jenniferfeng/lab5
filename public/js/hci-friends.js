@@ -12,14 +12,20 @@ function initializePage() {
 	console.log("Javascript connected!");
 }
 
+$(".friendName").click(function(e) {
+  e.preventDefault();
+  var newFriendName = anagrammedName($(this).text());
+  $(this).text(newFriendName);
+});
+
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
 	
 	if (name == "Doug Engelbart") {
+    return "Vandal Heist Run";
 		return "Notable Grudge";
 	} 
 	else if (name == "Ivan Sutherland") {
-		return "Vandal Heist Run";
 	}
 	else if (name == "JCR Licklider") {
 		return "Crick Rid Jell";
